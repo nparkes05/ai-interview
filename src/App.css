@@ -18,4 +18,9 @@ nav li{
   outline-color: white
 }
 
+#container{
+  float: right;
+  margin: 0;
+}
+
 
