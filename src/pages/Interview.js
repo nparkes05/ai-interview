@@ -6,6 +6,10 @@ const Interview = () => {
         <div>
             <h1 style={{textAlign: "center"}}>Interview</h1>
             <button type="button" onClick={clicked}>Try me!</button>
+            <form>
+                <label for="position">Enter a Position</label>
+                <input type="text" id="position" name="position"></input>
+            </form>
             <p id="repID">Response</p>
         </div>
     )
@@ -13,7 +17,9 @@ const Interview = () => {
 
 async function clicked() {
     try {
-        const message = await fetchRequest("test", "Test");
+        const role = document.getElementById("position").value;
+        console.log(role);
+        const message = await fetchRequest(role, "Test");
         console.log(message);
         document.getElementById("repID").innerHTML = message;
     } catch (error) {

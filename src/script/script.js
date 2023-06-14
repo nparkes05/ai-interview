@@ -2,7 +2,7 @@ const fetchRequest = async (role, skills) => {
     try {
         console.log(process.env.REACT_APP_API_KEY);
     //Make the prompt for the POST request
-    var prompt = "Hello world"
+    var prompt = "Make a set of interview questions for a " + role;
 
     //Make headers
     var myHeaders = new Headers();
