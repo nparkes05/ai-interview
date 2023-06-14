@@ -1,5 +1,6 @@
 const fetchRequest = async (role, skills) => {
     try {
+    const apiKey = process.env.API_KEY;
     //Make the prompt for the POST request
     var prompt = "Hello world"
 
@@ -7,7 +8,7 @@ const fetchRequest = async (role, skills) => {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
     myHeaders.append("Accept", "application/json");
-    myHeaders.append("Authorization", "Bearer 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");
+    myHeaders.append("Authorization", "Bearer apiKey");
 
     //Body
     var raw = JSON.stringify({
